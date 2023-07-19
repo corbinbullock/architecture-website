@@ -1,1 +1,20 @@
-<p>newuserpage works!</p>
+<!DOCTYPE html>
+<html en>
+    <h1>New User Information</h1>
+
+    <div>
+        <form [formGroup]="profileForm" (ngSubmit)="addUser()">
+            <label for="user">Name: </label>
+            <input type="text" id="name" formControlName="name"><br>
+            <label for="email">Email: </label>
+            <input type="text" id="email" formControlName="email"><br>
+            <label for="password">New Password: </label>
+            <input type="text" id="password" formControlName="password"><br>
+            <label for="confirmPassword">Confirm Password: </label>
+            <input type="text" id="confirmPassword" formControlName="confirmPassword"><br>
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+        
+    </div>
+
+</html>

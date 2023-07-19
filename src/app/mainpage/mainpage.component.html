@@ -1,1 +1,41 @@
-<p>mainpage works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <title>Anna's Architecture Site</title>
+  <meta name="description" content ="Project for Part 1"> <meta name="author" content=“CorbinBullock”>
+        
+  <h1>Welcome to Anna's Architecture</h1>
+  <body>
+    <style>
+      body {
+        column-count: 2;
+        column-rule: 1px solid grey;
+        vertical-align: top;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+      p {
+        vertical-align: top;
+      }
+    </style> 
+    Login:<br>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <label for="email">Email:  </label>
+      <input type="text" id="email" formControlName="email"><br>
+      <label for="password">Password:  </label>
+      <input type="text" id="password" formControlName="password"><br>
+      <button type="submit">Login<br></button>
+      
+    </form>
+    {{errorMessage}}
+    <!-- <div *ngFor="let profile of profiles">
+      <div>{{profile.name}}</div>
+      <div>{{profile.password}}</div>
+    </div> -->
+   
+    <p>New Clients:</p>
+    <button routerLink="newuserpage">Create Account</button>
+  </body>
+
+
+</html>

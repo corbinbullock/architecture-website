@@ -1,0 +1,26 @@
+* {
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    color: #616161;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+div {
+    line-height: 1.5;
+}

@@ -5,17 +5,12 @@ import { NewuserpageComponent } from './newuserpage/newuserpage.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 
 const routes: Routes = [
-  {path:'mainpage', component: MainpageComponent},
+  {path:'', component: MainpageComponent},
   {path:'profilepage', component: ProfilepageComponent},
   {path:'newuserpage', component: NewuserpageComponent}
 ];
 
 @NgModule({
-  declarations: [
-    MainpageComponent,
-    ProfilepageComponent,
-    NewuserpageComponent
-  ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
