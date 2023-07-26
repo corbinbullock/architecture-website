@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class NewuserpageComponent {
   
   profiles: Profile[] = this.profileService.getProfile();
-
+  errorMessage = ""
   profileForm = new FormGroup(
     {
       name: new FormControl(''),
@@ -32,10 +32,13 @@ export class NewuserpageComponent {
       this.profiles.push(new Profile(this.profileForm.value.name, this.profileForm.value.email, this.profileForm.value.password))
       console.log(this.profiles)
       this.router.navigate(['/'])
-      return 'Thanks'
+      this.errorMessage = "New user created"
+      return this.errorMessage
     }
     else{
-      return 'Passwords do not match'
+      this.errorMessage = "Passwords do not match"
+      return this.errorMessage
     }
+
   }
 }
