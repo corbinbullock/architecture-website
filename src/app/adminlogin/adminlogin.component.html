@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <h1>Admin Login</h1>
+    Login<br>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <p>
+            <label for="email">Email:  </label>
+            <input type="text" id="email" formControlName="email">
+
+        </p>
+        <p>
+            <label for="password">Password:  </label>
+            <input type="password" id="password" formControlName="password">  
+        </p>
+        <br>
+        <p>
+            <label></label>
+            <button type="submit">Login<br></button>
+        </p>
+    </form>
+    {{errorMessage}}
+</html>

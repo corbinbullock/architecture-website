@@ -3,9 +3,7 @@
     color: #616161;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
 }
-
 h1 {
     text-align: center;
     color: whitesmoke;
@@ -14,32 +12,29 @@ h1 {
     border-radius: 5px;
     background-color: cornflowerblue;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right:auto;
     padding-top: 20px;
     padding-bottom: 20px;
 
 }
-div {
-    line-height: 1;
-}
+
 form {display:table;}
 p {
     display:table-row;
     padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
+    padding-bottom: 0%;
+    padding-left: 0%;
     padding-right: 1%;
 }
 label {
     display:table-cell;
-    width: 150px; 
+    width: 100px; 
     padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-    
+    padding-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 1%; 
 }
 input {
     display:table-cell;
@@ -50,5 +45,5 @@ button {
     color: white;
     border-radius: 5px;
     border-color: cornflowerblue;
-    width: 150px;
+    width: 120px
 }

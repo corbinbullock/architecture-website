@@ -3,9 +3,7 @@
     color: #616161;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
 }
-
 h1 {
     text-align: center;
     color: whitesmoke;
@@ -35,29 +33,6 @@ h3 {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-form {display:table;}
-p {
-    display:table-row;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-label {
-    display:table-cell;
-    width: 170px; 
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-    
-}
-input {
-    display:table-cell;
-    width: 155px;
-}
-
 table {
     border: 1px solid black;
     border-collapse: collapse;
@@ -71,8 +46,9 @@ tr:nth-child(even) {
     background-color: lightgrey; 
 }
 button {
-    background-color: cornflowerblue;
+    background-color: red;
+    border-color: red;
+    width: 75%;
     color: white;
     border-radius: 5px;
-    border-color: cornflowerblue;
 }

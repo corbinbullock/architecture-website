@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Profile } from 'src/model/profile';
 import { ProfileService } from '../profile.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-newuserpage',
@@ -21,19 +22,19 @@ export class NewuserpageComponent {
     }
   )
 
-  constructor(private profileService: ProfileService){
+  constructor(private profileService: ProfileService,
+              private router: Router){
   }
 
   addUser():string{
     console.log("Submitted!")
     if (this.profileForm.value.password === this.profileForm.value.confirmPassword) {
       this.profiles.push(new Profile(this.profileForm.value.name, this.profileForm.value.email, this.profileForm.value.password))
-      console.log("if working")
       console.log(this.profiles)
+      this.router.navigate(['/'])
       return 'Thanks'
     }
     else{
-      console.log("else working")
       return 'Passwords do not match'
     }
   }

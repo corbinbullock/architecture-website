@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Profile } from 'src/model/profile';
 import { ProfileService } from '../profile.service';
+import { MainpageService } from '../mainpage.service';
+import { CurrentUser } from 'src/model/currentuser';
+
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -21,21 +24,21 @@ export class MainpageComponent {
       password: new FormControl('')
     }
   )
-
   
-  constructor(private profileService: ProfileService, private router: Router) {
+  constructor(private profileService: ProfileService, 
+              private router: Router,
+              private mainpageService: MainpageService) {
   }
 
   login(): void{ 
     for(let i = 0; i < this.profiles.length; i++) {
       if (this.profiles[i].email === this.loginForm.value.email) {
         if(this.profiles[i].password === this.loginForm.value.password){
-          console.log("WOOHOO")
           this.errorMessage = ""
+          this.mainpageService.setCurrentUser(new CurrentUser(this.profiles[i].name!, this.profiles[i].email!))  
           this.router.navigate(['/profilepage'])
         }
         else {
-          console.log("Womp womp")
           this.errorMessage = "Incorrect Password"
         }
       }
@@ -45,5 +48,5 @@ export class MainpageComponent {
     }
     return 
   }
-  
+
 }

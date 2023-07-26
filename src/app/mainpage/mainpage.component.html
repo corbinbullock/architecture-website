@@ -6,36 +6,42 @@
         
   <h1>Welcome to Anna's Architecture</h1>
   <body>
-    <style>
-      body {
-        column-count: 2;
-        column-rule: 1px solid grey;
-        vertical-align: top;
-        margin-top: 10px;
-        line-height: 1.5;
-      }
-      p {
-        vertical-align: top;
-      }
-    </style> 
-    Login:<br>
-    <form [formGroup]="loginForm" (ngSubmit)="login()">
-      <label for="email">Email:  </label>
-      <input type="text" id="email" formControlName="email"><br>
-      <label for="password">Password:  </label>
-      <input type="text" id="password" formControlName="password"><br>
-      <button type="submit">Login<br></button>
-      
-    </form>
-    {{errorMessage}}
-    <!-- <div *ngFor="let profile of profiles">
-      <div>{{profile.name}}</div>
-      <div>{{profile.password}}</div>
-    </div> -->
+    <div>
+      Login<br>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <p>
+          <label for="email">Email:  </label>
+          <input type="text" id="email" formControlName="email"><br>
+        </p>
+        <p>
+          <label for="password">Password:  </label>
+          <input type="password" id="password" formControlName="password"><br>
+        </p>
+        <br>
+        <p>
+          <button type="submit">Login<br></button>
+        </p>
+      </form>
+      {{errorMessage}}
+    </div>
    
-    <p>New Clients:</p>
-    <button routerLink="newuserpage">Create Account</button>
+    <div>
+      <p>
+        <label>New Clients:</label>
+        <button routerLink="newuserpage">Create Account</button>
+      </p>
+    </div>
+    <br>
+    <div>
+      <p>
+        <label>Admin:</label>
+        <button routerLink="adminlogin">Admin</button>
+      </p>
+    </div>
+    <br><br>
   </body>
-
+ 
+    
+  
 
 </html>

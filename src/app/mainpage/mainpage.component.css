@@ -16,8 +16,41 @@ h1 {
     margin-top: 10px;
     margin-bottom: 0px;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     padding-top: 20px;
     padding-bottom: 20px;
 
+}
+
+body {
+    column-count: 2;
+    column-rule: 1px solid grey;
+}
+
+form {display:table;}
+p {
+    display:table-row;
+    padding-top: 1%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 1%;
+}
+label {
+    display:table-cell;
+    width: 100px; 
+    padding-top: 1%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 1%; 
+}
+input {
+    display:table-cell;
+    width: 155px;
+}
+button {
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 5px;
+    border-color: cornflowerblue;
+    width: 120px
 }

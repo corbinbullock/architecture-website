@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { NewuserpageComponent } from './newuserpage/newuserpage.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 @NgModule({
   declarations: [   
     AppComponent,
     MainpageComponent,
     ProfilepageComponent,
-    NewuserpageComponent
+    NewuserpageComponent,
+    AdminpageComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,
